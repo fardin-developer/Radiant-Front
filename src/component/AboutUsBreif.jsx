@@ -168,7 +168,7 @@ const AboutUsBrief = () => {
                       <img
                         src="/fardin.png"
                         alt={leader.name}
-                        className="w-24 h-24 rounded-full relative"
+                        className="w-24 h-24 rounded-full relative object-cover"
                       />
                     </div>
                     <div>
