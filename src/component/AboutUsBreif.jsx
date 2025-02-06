@@ -107,7 +107,7 @@ const AboutUsBrief = () => {
               className="text-xl md:text-2xl text-blue-100"
               variants={fadeInUpVariants}
             >
-              Welcome to <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Greenwood Senior Secondary School</span>
+              Welcome to <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Radiant Senior Secondary School</span>
             </motion.p>
             <motion.p
               className="text-lg text-blue-200"
