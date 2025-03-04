@@ -1,7 +1,16 @@
-import React from 'react';
-import { School, Trophy, Users, BookOpen, Award, User, Sparkles, Star } from 'lucide-react';
-import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
+import React from "react";
+import {
+  School,
+  Trophy,
+  Users,
+  BookOpen,
+  Award,
+  User,
+  Sparkles,
+  Star,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 // Client-side only component for animated background
 const AnimatedBackground = dynamic(
@@ -44,34 +53,50 @@ const AnimatedBackground = dynamic(
         </div>
       );
     }),
-  { ssr: false }
+  { ssr: false },
 );
 
 const AboutUsBrief = () => {
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   const stats = [
-    { icon: Trophy, value: "25+", label: "Years of Excellence", color: "bg-blue-500" },
-    { icon: BookOpen, value: "95%+", label: "Board Exam Success", color: "bg-purple-500" },
-    { icon: Users, value: "1000+", label: "Successful Alumni", color: "bg-pink-500" }
+    {
+      icon: Trophy,
+      value: "25+",
+      label: "Years of Excellence",
+      color: "bg-blue-500",
+    },
+    {
+      icon: BookOpen,
+      value: "95%+",
+      label: "Board Exam Success",
+      color: "bg-purple-500",
+    },
+    {
+      icon: Users,
+      value: "1000+",
+      label: "Successful Alumni",
+      color: "bg-pink-500",
+    },
   ];
 
   const leaders = [
     {
-      name: "Dr. Fardin Mustaque",
-      role: "Principal",
-      description: "With over 20 years of experience in education, dedicated to fostering excellence and innovation.",
-      color: "from-blue-400 to-purple-400"
+      name: "Tajuddin Ahmed",
+      role: "Founder & Director",
+      description: `It is with great pride that I extend a warm welcome to you all to this distinguished center of learning. Wisdom Senior Secondary School, established in 2025 under the aegis of the Radiant Education Trust, is committed to delivering top-quality education to the students of North East India, enabling them to excel on a national platform.  We strive to provide students with exceptional opportunities for both academic excellence and professional development.`,
+      color: "from-blue-400 to-purple-400",
     },
     {
-      name: "Dr. Fardin Mustaque",
-      role: "Vice Principal",
-      description: "Brings a passion for student development and a focus on holistic education.",
-      color: "from-purple-400 to-pink-400"
-    }
+      name: "XYZ",
+      role: "Principal",
+      description: `Our goal is to make learning an enriching, fulfilling, and enjoyable journey through a multi-disciplinary approach. As the principal, I am committed to fostering an environment where students, parents, and faculty work together to achieve excellence.
+With a focus on holistic development, I will extend my guidance to ensure positive growth in all aspects of our institute. Together, we aim to create a culture of innovation, collaboration, and success.`,
+      color: "from-purple-400 to-pink-400",
+    },
   ];
 
   return (
@@ -107,7 +132,10 @@ const AboutUsBrief = () => {
               className="text-xl md:text-2xl text-blue-100"
               variants={fadeInUpVariants}
             >
-              Welcome to <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Radiant Senior Secondary School</span>
+              Welcome to{" "}
+              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Radiant Senior Secondary School
+              </span>
             </motion.p>
             <motion.p
               className="text-lg text-blue-200"
@@ -135,7 +163,9 @@ const AboutUsBrief = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity" />
               <div className="relative bg-gray-900 p-8 rounded-2xl border border-gray-700">
                 <stat.icon className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-                <h3 className="text-3xl font-bold text-white mb-2">{stat.value}</h3>
+                <h3 className="text-3xl font-bold text-white mb-2">
+                  {stat.value}
+                </h3>
                 <p className="text-blue-200">{stat.label}</p>
               </div>
             </motion.div>
@@ -160,11 +190,15 @@ const AboutUsBrief = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity`} />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity`}
+                />
                 <div className="relative bg-gray-900 p-8 rounded-2xl border border-gray-700">
                   <div className="flex items-center space-x-4">
                     <div className="relative">
-                      <div className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-full blur-md`} />
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-full blur-md`}
+                      />
                       <img
                         src="/fardin.png"
                         alt={leader.name}
@@ -172,7 +206,9 @@ const AboutUsBrief = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold text-white">{leader.name}</h4>
+                      <h4 className="text-xl font-semibold text-white">
+                        {leader.name}
+                      </h4>
                       <p className="text-blue-300">{leader.role}</p>
                     </div>
                   </div>
