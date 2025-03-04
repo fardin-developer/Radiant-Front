@@ -1,25 +1,23 @@
-"use client"
-import React from 'react';
-import { motion } from 'framer-motion';
-import OrbitingBalls from './OrbitingBalls';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 const FeatureSection = () => {
-
   const features = [
     {
-      icon: '🏫',
-      title: 'Modern Facilities',
-      description: 'State-of-the-art classrooms, labs, and sports facilities.',
+      icon: "🏫",
+      title: "Modern Facilities",
+      description: "State-of-the-art classrooms, labs, and sports facilities.",
     },
     {
-      icon: '👩‍🏫',
-      title: 'Expert Faculty',
-      description: 'Highly qualified and experienced teachers.',
+      icon: "👩‍🏫",
+      title: "Expert Faculty",
+      description: "Highly qualified and experienced teachers.",
     },
     {
-      icon: '🚀',
-      title: 'Future-Ready Curriculum',
-      description: 'Focus on STEM, arts, and holistic development.',
+      icon: "🚀",
+      title: "Future-Ready Curriculum",
+      description: "Focus on STEM, arts, and holistic development.",
     },
   ];
 
@@ -39,8 +37,10 @@ const FeatureSection = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="group"
             >
-              <div className="h-full bg-gray-50 p-8 rounded-xl shadow-lg 
-                         hover:shadow-2xl transition-all duration-300">
+              <div
+                className="h-full bg-gray-50 p-8 rounded-xl shadow-lg 
+                         hover:shadow-2xl transition-all duration-300"
+              >
                 <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
@@ -57,8 +57,7 @@ const FeatureSection = () => {
       </div>
     </div>
   );
+};
 
+export default FeatureSection;
 
-}
-
-export default FeatureSection
