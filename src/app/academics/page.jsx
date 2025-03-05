@@ -20,56 +20,63 @@ export default function AcademicsPage() {
           </div>
         </section>
 
-        {/* Academic Programs Section */}
-        <section id="courses" className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-400 pb-2">
-              Our Academic Programs
-            </h2>
+{/* Academic Programs Section */}
+<section id="courses" className="py-16 px-4">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-400 pb-2">
+      Our Academic Programs
+    </h2>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Science Stream */}
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">
-                  SCIENCE
-                </h3>
-                <ul className="space-y-3 list-disc pl-4 mb-4">
-                  <li>English, Alt. English, MIL Hindi, MIL Assamese</li>
-                  <li>Physics, Chemistry, Biology, Maths</li>
-                  <li>Computer Science, Statistics</li>
-                </ul>
-              </div>
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* Pre-Primary & Primary Education */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow md:col-span-3">
+        <h3 className="text-xl font-semibold mb-4 text-blue-600">
+          SCHOOL EDUCATION (PRE-PRIMARY TO CLASS 10)
+        </h3>
+        <p className="text-gray-700 mb-4">
+          Our school education program follows a comprehensive curriculum from pre-primary to Class 10, ensuring a strong academic foundation. It integrates core subjects, language proficiency, and co-curricular activities to nurture intellectual, creative, and social development. Emphasis is placed on experiential learning, critical thinking, and holistic growth.
+        </p>
+      </div>
 
-              {/* Commerce Stream */}
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">
-                  COMMERCE
-                </h3>
-                <ul className="space-y-3 list-disc pl-4 mb-4">
-                  <li>English, Alt. English, MIL Hindi, MIL Assamese</li>
-                  <li>Accountancy, Business Studies, Finance, Economics</li>
-                  <li>Information Practices, BSMT</li>
-                </ul>
-              </div>
+      {/* Higher Secondary Science */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold mb-4 text-blue-600">
+          HIGHER SECONDARY SCIENCE
+        </h3>
+        <ul className="space-y-3 list-disc pl-4 mb-4">
+          <li>English, Alt. English, MIL Hindi, MIL Assamese</li>
+          <li>Physics, Chemistry, Biology, Mathematics</li>
+          <li>Computer Science, Statistics</li>
+        </ul>
+      </div>
 
-              {/* Arts Stream */}
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">
-                  ARTS
-                </h3>
-                <ul className="space-y-3 list-disc pl-4 mb-4">
-                  <li>English, Alt. English, MIL Hindi, MIL Assamese</li>
-                  <li>
-                    Political Science, History, Logic & Philosophy, Geography
-                  </li>
-                  <li>
-                    Education, Economics, Information Practices, Sociology
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Higher Secondary Commerce */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold mb-4 text-blue-600">
+          HIGHER SECONDARY COMMERCE
+        </h3>
+        <ul className="space-y-3 list-disc pl-4 mb-4">
+          <li>English, Alt. English, MIL Hindi, MIL Assamese</li>
+          <li>Accountancy, Business Studies, Finance, Economics</li>
+          <li>Information Practices, BSMT</li>
+        </ul>
+      </div>
+
+      {/* Higher Secondary Arts */}
+      <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <h3 className="text-xl font-semibold mb-4 text-blue-600">
+          HIGHER SECONDARY ARTS
+        </h3>
+        <ul className="space-y-3 list-disc pl-4 mb-4">
+          <li>English, Alt. English, MIL Hindi, MIL Assamese</li>
+          <li>Political Science, History, Logic & Philosophy, Geography</li>
+          <li>Education, Economics, Information Practices, Sociology</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Faculty Section */}
         <section id="faculty" className="bg-white py-16 px-4">
