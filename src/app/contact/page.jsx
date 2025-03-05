@@ -1,8 +1,91 @@
+"use client";
 import Footer from '@/component/global/Footer';
 import Navbar from '@/component/global/Navbar';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from "emailjs-com";
 
 const ContactUsPage = () => {
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const [formStatus, setFormStatus] = useState({
+        sending: false,
+        success: false,
+        error: null
+    });
+
+    // Initialize EmailJS once when the component mounts
+    useEffect(() => {
+        // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+        emailjs.init("YOUR_PUBLIC_KEY");
+    }, []);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        
+        // Reset form status
+        setFormStatus({
+            sending: true,
+            success: false,
+            error: null
+        });
+
+        // Validate form data
+        if (!formData.name || !formData.email || !formData.message) {
+            setFormStatus({
+                sending: false,
+                success: false,
+                error: "Please fill in all fields."
+            });
+            return;
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setFormStatus({
+                sending: false,
+                success: false,
+                error: "Please enter a valid email address."
+            });
+            return;
+        }
+
+        // Send email without the initialization check
+        emailjs.send(
+            "service_0w1ybzr",  // Your EmailJS service ID
+            "template_5arjohj", // Your EmailJS template ID
+            {
+                from_name: formData.name,
+                from_email: formData.email,
+                message: formData.message,
+                reply_to: formData.email
+            },
+            "ivxyrG1HmhACHafL0" // Replace with your actual EmailJS public key
+        )
+        .then((response) => {
+            console.log("Email sent successfully!", response);
+            setFormStatus({
+                sending: false,
+                success: true,
+                error: null
+            });
+            
+            // Reset form after successful submission
+            setFormData({ name: "", email: "", message: "" });
+        })
+        .catch((error) => {
+            console.error("Error sending email:", error);
+            setFormStatus({
+                sending: false,
+                success: false,
+                error: `Failed to send message. ${error.text || 'Please try again.'}`
+            });
+        });
+    };
+
     return (
         <>
             <Navbar />
@@ -19,51 +102,71 @@ const ContactUsPage = () => {
                         {/* Left Side: Contact Form */}
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                            <form className="space-y-6">
+                            
+                            {/* Form Status Messages */}
+                            {formStatus.error && (
+                                <div className="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                                    {formStatus.error}
+                                </div>
+                            )}
+                            {formStatus.success && (
+                                <div className="mb-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                                    Message sent successfully! We'll get back to you soon.
+                                </div>
+                            )}
+
+                            <form className="space-y-6" onSubmit={sendEmail}>
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                                        Your Name
-                                    </label>
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Your Name</label>
                                     <input
                                         type="text"
                                         id="name"
-                                        placeholder="write your name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        placeholder="Write your name"
                                         className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                        Your Email
-                                    </label>
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Your Email</label>
                                     <input
                                         type="email"
                                         id="email"
-                                        placeholder="write your email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        placeholder="Write your email"
                                         className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
                                     />
                                 </div>
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                                        Your Message
-                                    </label>
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">Your Message</label>
                                     <textarea
                                         id="message"
                                         rows="4"
+                                        value={formData.message}
+                                        onChange={handleChange}
                                         placeholder="How can we help you?"
                                         className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
                                     ></textarea>
                                 </div>
                                 <button
                                     type="submit"
-                                    className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
+                                    disabled={formStatus.sending}
+                                    className={`w-full py-3 px-6 rounded-lg transition duration-300 
+                                        ${formStatus.sending 
+                                            ? 'bg-gray-400 cursor-not-allowed' 
+                                            : 'bg-blue-600 text-white hover:bg-blue-700'}`}
                                 >
-                                    Send Message
+                                    {formStatus.sending ? 'Sending...' : 'Send Message'}
                                 </button>
                             </form>
                         </div>
 
-                        {/* Right Side: Contact Details and Map */}
-                        <div className="space-y-8 bg-re">
+                       {/* Right Side: Contact Details and Map */}
+                       <div className="space-y-8 bg-re">
                             {/* Contact Details */}
                             <div className="bg-white h-full p-8 rounded-lg shadow-lg">
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
@@ -93,8 +196,8 @@ const ContactUsPage = () => {
                                         <div>
                                             <p className="text-lg font-medium text-gray-900">Address</p>
                                             <p className="text-gray-600">
-                                            Nimtoli, Ghansimuli, Kharupetia <br />
-                                            Darrang, Assam - 784115
+                                                Nimtoli, Ghansimuli, Kharupetia <br />
+                                                Darrang, Assam - 784115
                                             </p>
                                         </div>
                                     </div>
@@ -118,8 +221,8 @@ const ContactUsPage = () => {
                                         <div>
                                             <p className="text-lg font-medium text-gray-900">General Queries</p>
                                             <p className="text-gray-600">
-                                            Phone: 6000522263, 6000836915<br />
-                                            Email: radiantseniorsecondaryschool@gmail.com
+                                                Phone: 6000522263, 6000836915<br />
+                                                Email: radiantseniorsecondaryschool@gmail.com
                                             </p>
                                         </div>
                                     </div>
@@ -178,7 +281,7 @@ const ContactUsPage = () => {
 
                     </div>
                     {/* Google Maps Embed */}
-                    <div className="bg-white p-8 rounded-lg shadow-lg">
+                    {/* <div className="bg-white p-8 rounded-lg shadow-lg">
                         <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Location</h2>
                         <div className="w-full h-64 rounded-lg overflow-hidden">
                             <iframe
@@ -190,8 +293,11 @@ const ContactUsPage = () => {
                                 loading="lazy"
                             ></iframe>
                         </div>
+                    </div> */}
+
+
                     </div>
-                </div>
+                
             </div>
             <Footer />
         </>

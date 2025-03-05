@@ -93,12 +93,12 @@ const AboutUsBrief = () => {
       color: "from-blue-400 to-purple-400",
     },
     {
-      name: "XYZ",
+      name: "Bandana Bharadwaj",
       role: "Principal",
-      description: `Our goal is to make learning an enriching, fulfilling, and enjoyable journey through a multi-disciplinary approach. As the principal, I am committed to fostering an environment where students, parents, and faculty work together to achieve excellence.
-With a focus on holistic development, I will extend my guidance to ensure positive growth in all aspects of our institute. Together, we aim to create a culture of innovation, collaboration, and success.`,
+      description: `At Radiant Senior Secondary School, we believe education is a journey of growth, discovery, and empowerment. As Principal, my vision is to nurture a learning environment that inspires curiosity, creativity, and excellence. Through a collaborative approach involving students, faculty, and parents, we aim to foster holistic development, critical thinking, and leadership skills. Together, we will build a legacy of innovation, resilience, and success, shaping bright futures and confident individuals.`,
       color: "from-purple-400 to-pink-400",
     },
+    
   ];
 
   return (

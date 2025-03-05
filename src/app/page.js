@@ -20,7 +20,7 @@ const Home = () => {
       <BannerSection />
       <ClearScreen className="h-screen" />
       <AboutUsBrief />
-      <StudentLife className="mt-24" />
+      {/* <StudentLife className="mt-24" /> */}
       <ValuesSection />
 
       <NewsUpdates />

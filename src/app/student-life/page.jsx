@@ -1,17 +1,11 @@
+import CampusGallery from "@/component/CampusGallery";
 import Footer from "@/component/global/Footer";
 import Navbar from "@/component/global/Navbar";
 import { Camera, BookOpen, Globe, Music, Trophy } from 'lucide-react';
 
 export default function StudentLifePage() {
   // Sample gallery images (replace with actual image paths)
-  const galleryImages = [
-    "/api/placeholder/400/300",
-    "/api/placeholder/400/300",
-    "/api/placeholder/400/300",
-    "/api/placeholder/400/300",
-    "/api/placeholder/400/300",
-    "/api/placeholder/400/300"
-  ];
+
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -123,35 +117,7 @@ export default function StudentLifePage() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="py-16 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-400 pb-2">
-              Campus Gallery
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {galleryImages.map((image, index) => (
-                <div 
-                  key={index} 
-                  className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow group"
-                >
-                  <img 
-                    src={image} 
-                    alt={`Campus Gallery Image ${index + 1}`} 
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform"
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <a 
-                href="#" 
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
-              >
-                View Full Gallery
-              </a>
-            </div>
-          </div>
-        </section>
+        <CampusGallery/>
       </main>
 
       <Footer />

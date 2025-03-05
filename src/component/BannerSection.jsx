@@ -1,10 +1,12 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const FuturisticBanner = () => {
   const [text, setText] = useState("");
   const fullText = "Welcome to Radiant Senior Secondary School...";
   const isInitialRender = useRef(true);
+  const router = useRouter();
 
   useEffect(() => {
     // Prevent multiple effect runs
@@ -66,7 +68,7 @@ const FuturisticBanner = () => {
 
       {/* Button */}
       <div className="relative z-10 mt-4">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+        <button onClick={()=>{router.push('/about')}} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
           Explore More
         </button>
       </div>

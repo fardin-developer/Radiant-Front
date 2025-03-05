@@ -121,9 +121,9 @@ export default function AcademicsPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+              {/* <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
                 Meet All Faculty
-              </button>
+              </button> */}
             </div>
           </div>
         </section>
