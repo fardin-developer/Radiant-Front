@@ -8,6 +8,7 @@ import {
   User,
   Sparkles,
   Star,
+  Calendar
 } from "lucide-react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -64,22 +65,23 @@ const AboutUsBrief = () => {
 
   const stats = [
     {
-      icon: Trophy,
-      value: "25+",
-      label: "Years of Excellence",
+      icon: Calendar,
+      value: "2025",
+      label: "Founded In",
       color: "bg-blue-500",
     },
     {
       icon: BookOpen,
-      value: "95%+",
-      label: "Board Exam Success",
-      color: "bg-purple-500",
+      value: "20+",
+      label: "Modern Courses",
+      color: "bg-green-500",
     },
+  
     {
-      icon: Users,
-      value: "1000+",
-      label: "Successful Alumni",
-      color: "bg-pink-500",
+      icon: Star,
+      value: "100%",
+      label: "Focus on Holistic Learning",
+      color: "bg-yellow-500",
     },
   ];
 
@@ -87,7 +89,7 @@ const AboutUsBrief = () => {
     {
       name: "Tajuddin Ahmed",
       role: "Founder & Director",
-      description: `It is with great pride that I extend a warm welcome to you all to this distinguished center of learning. Wisdom Senior Secondary School, established in 2025 under the aegis of the Radiant Education Trust, is committed to delivering top-quality education to the students of North East India, enabling them to excel on a national platform.  We strive to provide students with exceptional opportunities for both academic excellence and professional development.`,
+      description: `It is with great pride that I extend a warm welcome to you all to this distinguished center of learning. Radiant Senior Secondary School, established in 2025 under the aegis of the Radiant Education Trust, is committed to delivering top-quality education to the students of North East India, enabling them to excel on a national platform.  We strive to provide students with exceptional opportunities for both academic excellence and professional development.`,
       color: "from-blue-400 to-purple-400",
     },
     {
@@ -141,7 +143,7 @@ With a focus on holistic development, I will extend my guidance to ensure positi
               className="text-lg text-blue-200"
               variants={fadeInUpVariants}
             >
-              Where excellence meets innovation in education since 1995
+              Where excellence meets innovation in education since 2025
             </motion.p>
           </div>
         </motion.div>

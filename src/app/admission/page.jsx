@@ -160,7 +160,7 @@ export default function AdmissionPage() {
               Start your journey with us by filling out the online application form.
             </p>
             <a
-              href="/apply"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd2B9nuVQF9yeEiCABIwir7RVri0XC4c7uPVlKGRcj0STBOmg/viewform?usp=dialog"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
             >
               Apply Now
