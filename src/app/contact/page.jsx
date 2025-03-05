@@ -182,7 +182,7 @@ const ContactUsPage = () => {
                         <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Location</h2>
                         <div className="w-full h-64 rounded-lg overflow-hidden">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.9245065680292!2d92.0853943636344!3d26.623109753377737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375b1700736d12e9%3A0x58bc3cbee11ec7b2!2sRadiance%20Senior%20Secondary%20School%2CDarrang!5e0!3m2!1sen!2sin!4v1741151501534!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d193961.29320691113!2d92.54389999400809!3d26.33368482466977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1741154365672!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

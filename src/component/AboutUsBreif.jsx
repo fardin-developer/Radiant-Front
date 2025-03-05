@@ -200,7 +200,7 @@ With a focus on holistic development, I will extend my guidance to ensure positi
                         className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-full blur-md`}
                       />
                       <img
-                        src="/fardin.png"
+                        src={`/${leader.name}.png`}
                         alt={leader.name}
                         className="w-24 h-24 rounded-full relative object-cover"
                       />
