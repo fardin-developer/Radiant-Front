@@ -4,24 +4,23 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'John Doe',
+    name: 'Amit Sharma',
     role: 'Parent',
-    quote: 'This school has transformed my childs learning experience. Highly recommended!',
+    quote: 'This school has given my child the best learning experience. The teachers are excellent!',
   },
   {
-    name: 'Jane Smith',
+    name: 'Fatima Khatun',
     role: 'Student',
-    quote: 'The teachers are amazing, and the facilities are top-notch.',
+    quote: 'I love my school! The environment is so friendly, and the teachers are always helpful.',
   },
   {
-    name: 'Alice Johnson',
+    name: 'Rajesh Verma',
     role: 'Parent',
-    quote: 'A perfect blend of academics and extracurricular activities.',
+    quote: 'A great balance of studies and extracurricular activities. My son enjoys coming to school!',
   },
 ];
 
 const TestimonialsSection = () => {
-
   return (
     <div className="relative py-20 bg-gray-900">
       <div className="container mx-auto px-4">
@@ -61,7 +60,3 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
-
-
-
-

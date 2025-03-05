@@ -105,18 +105,18 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
           <p className="text-sm mb-2">
-            123 Education Street,
+          Nimtoli, Ghansimuli, 
             <br />
-            Mumbai, Maharashtra 400001
+            Kharupetia Darrang Assam 784115
           </p>
-          <p className="text-sm mb-2">📞 +91 123 456 7890</p>
+          <p className="text-sm mb-2">📞 +91 6000 522 263</p>
           <p className="text-sm">
             📧{' '}
             <a
               href="mailto:info@radiant.edu.in"
               className="hover:text-white"
             >
-              info@radiant.edu.in
+              radiantseniorsecondaryschool@gmail.com
             </a>
           </p>
         </div>
