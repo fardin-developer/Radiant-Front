@@ -1,3 +1,4 @@
+import FacultySection from "@/component/Faculty";
 import Footer from "@/component/global/Footer";
 import Navbar from "@/component/global/Navbar";
 
@@ -78,55 +79,7 @@ export default function AcademicsPage() {
 </section>
 
 
-        {/* Faculty Section */}
-        <section id="faculty" className="bg-white py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 border-b-4 border-blue-400 pb-2">
-              Distinguished Faculty
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Faculty Member - Sarah Johnson */}
-              <div className="group p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                <div className="aspect-square bg-gray-100 rounded-lg mb-4" />
-                <h3 className="text-xl font-semibold">Dr. Sarah Johnson</h3>
-                <p className="text-blue-600 mb-2">Head of Computer Science</p>
-                <p className="text-gray-600">
-                  15+ years experience in AI research, published in top-tier
-                  journals, and recipient of National Teaching Excellence Award.
-                </p>
-              </div>
-
-              {/* Faculty Member - Michael Chen */}
-              <div className="group p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                <div className="aspect-square bg-gray-100 rounded-lg mb-4" />
-                <h3 className="text-xl font-semibold">Prof. Michael Chen</h3>
-                <p className="text-blue-600 mb-2">Dean of Business Studies</p>
-                <p className="text-gray-600">
-                  Former Fortune 500 executive, specializing in strategic
-                  management and international business development.
-                </p>
-              </div>
-
-              {/* Faculty Member - Emily Rodriguez */}
-              <div className="group p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                <div className="aspect-square bg-gray-100 rounded-lg mb-4" />
-                <h3 className="text-xl font-semibold">Dr. Emily Rodriguez</h3>
-                <p className="text-blue-600 mb-2">Director of Research</p>
-                <p className="text-gray-600">
-                  Leading researcher in educational psychology with multiple
-                  NSF-funded projects and international collaborations.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 text-center">
-              {/* <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                Meet All Faculty
-              </button> */}
-            </div>
-          </div>
-        </section>
+     <FacultySection/>
 
         {/* Academic Schedule Section */}
         <section id="timetable" className="py-16 px-4 bg-gray-50">
