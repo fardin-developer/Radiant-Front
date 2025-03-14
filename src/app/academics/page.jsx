@@ -32,7 +32,7 @@ export default function AcademicsPage() {
       {/* Pre-Primary & Primary Education */}
       <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow md:col-span-3">
         <h3 className="text-xl font-semibold mb-4 text-blue-600">
-          SCHOOL EDUCATION (PRE-PRIMARY TO CLASS 10)
+          SCHOOL EDUCATION (VI TO CLASS X)
         </h3>
         <p className="text-gray-700 mb-4">
           Our school education program follows a comprehensive curriculum from pre-primary to Class 10, ensuring a strong academic foundation. It integrates core subjects, language proficiency, and co-curricular activities to nurture intellectual, creative, and social development. Emphasis is placed on experiential learning, critical thinking, and holistic growth.

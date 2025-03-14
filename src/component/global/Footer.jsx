@@ -110,6 +110,7 @@ export default function Footer() {
             Kharupetia Darrang Assam 784115
           </p>
           <p className="text-sm mb-2">📞 +91 6000 522 263</p>
+          <p className="text-sm mb-2">📞 +91 6000 836 915</p>
           <p className="text-sm">
             📧{' '}
             <a
@@ -124,7 +125,7 @@ export default function Footer() {
 
       <div className="mt-8 text-center border-t border-gray-700 pt-4">
         <p className="text-sm">
-          &copy; 2024 Radianti Academy. All rights reserved.
+          &copy; 2024 Radiant Academy. All rights reserved.
         </p>
       </div>
     </footer>
