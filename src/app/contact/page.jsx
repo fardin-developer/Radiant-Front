@@ -90,10 +90,19 @@ const ContactUsPage = () => {
         <>
             <Navbar />
             {/* Banner Section */}
-            <div className="relative h-96 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('contact-us.png')" }}>
+            {/* <div className="relative h-96 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('contact-us.png')" }}>
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                 <h1 className="text-5xl font-bold text-white z-10">Contact Us</h1>
-            </div>
+            </div> */}
+               {/* Hero Section */}
+        <section className="bg-blue-900 text-white py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <p className="text-xl md:text-2xl font-light">
+              Ask your Queries
+            </p>
+          </div>
+        </section>
 
             {/* Contact Section */}
             <div className="py-16 bg-gray-50">

@@ -56,13 +56,23 @@ export default function AboutUs() {
       <Navbar />
       <div className="bg-gray-50">
         {/* Banner Section */}
-        <div
+        {/* <div
           className="relative h-[500px] flex items-center justify-center bg-cover bg-center"
-          style={{ backgroundImage: "url('contact-us.png')" }}
+          
         >
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
           <h1 className="text-6xl font-extrabold text-white z-10">About Us</h1>
-        </div>
+        </div> */}
+        {/* Hero Section */}
+        <section className="bg-blue-900 text-white py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
+            <p className="text-xl md:text-2xl font-light">
+            Empowering Students for a Brighter Tomorrow
+            </p>
+          </div>
+        </section>
+        I
 
         {/* About Our School Section */}
         <section id="about-school" className="container mx-auto px-6 py-16">
@@ -200,73 +210,73 @@ export default function AboutUs() {
 
         {/* Infrastructure Section */}
         <section id="infrastructure" className="bg-white py-20">
-  <div className="container mx-auto px-6">
-    <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
-      Our Infrastructure
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* LAB */}
-      <div className="bg-gray-50 rounded-lg p-6 shadow-md">
-        <Building className="w-12 h-12 text-blue-600 mb-4" />
-        <h3 className="text-2xl font-semibold mb-4">LAB</h3>
-        <p className="text-gray-700">
-          Our laboratories are equipped with modern tools and designed to provide a spacious environment,
-          comfortably accommodating large groups of students. The science lab enables students to conduct
-          experiments, collect data, observe phenomena, analyze results, and interpret findings. The facilities
-          include dedicated labs for Physics, Biology, Chemistry, and Computer Science.
-        </p>
-      </div>
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+              Our Infrastructure
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* LAB */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+                <Building className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-2xl font-semibold mb-4">LAB</h3>
+                <p className="text-gray-700">
+                  Our laboratories are equipped with modern tools and designed to provide a spacious environment,
+                  comfortably accommodating large groups of students. The science lab enables students to conduct
+                  experiments, collect data, observe phenomena, analyze results, and interpret findings. The facilities
+                  include dedicated labs for Physics, Biology, Chemistry, and Computer Science.
+                </p>
+              </div>
 
-      {/* LIBRARY */}
-      <div className="bg-gray-50 rounded-lg p-6 shadow-md">
-        <BookOpen className="w-12 h-12 text-green-600 mb-4" />
-        <h3 className="text-2xl font-semibold mb-4">LIBRARY</h3>
-        <p className="text-gray-700">
-          A nation’s identity is deeply rooted in knowledge and wisdom, much of which is drawn from books, periodicals,
-          journals, and newspapers. With this vision in mind, Radiant will open its library at the earliest, coinciding
-          with the establishment of the school. The library will cater to both faculty and students, offering a wide
-          range of resources that can be borrowed to meet their academic and intellectual needs.
-        </p>
-      </div>
+              {/* LIBRARY */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+                <BookOpen className="w-12 h-12 text-green-600 mb-4" />
+                <h3 className="text-2xl font-semibold mb-4">LIBRARY</h3>
+                <p className="text-gray-700">
+                  A nation’s identity is deeply rooted in knowledge and wisdom, much of which is drawn from books, periodicals,
+                  journals, and newspapers. With this vision in mind, Radiant will open its library at the earliest, coinciding
+                  with the establishment of the school. The library will cater to both faculty and students, offering a wide
+                  range of resources that can be borrowed to meet their academic and intellectual needs.
+                </p>
+              </div>
 
-      {/* DIGITAL CLASSROOM */}
-      <div className="bg-gray-50 rounded-lg p-6 shadow-md">
-        <Monitor className="w-12 h-12 text-purple-600 mb-4" />
-        <h3 className="text-2xl font-semibold mb-4">DIGITAL CLASSROOM</h3>
-        <p className="text-gray-700">
-          Radiant sets itself apart with cutting-edge digital classrooms, outfitted with smart TVs and WiFi access.
-          Instructors seamlessly integrate diverse multimedia resources, including images, videos, and PowerPoint
-          presentations into their teaching repertoire, elevating the learning experience for students.
-        </p>
-      </div>
+              {/* DIGITAL CLASSROOM */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+                <Monitor className="w-12 h-12 text-purple-600 mb-4" />
+                <h3 className="text-2xl font-semibold mb-4">DIGITAL CLASSROOM</h3>
+                <p className="text-gray-700">
+                  Radiant sets itself apart with cutting-edge digital classrooms, outfitted with smart TVs and WiFi access.
+                  Instructors seamlessly integrate diverse multimedia resources, including images, videos, and PowerPoint
+                  presentations into their teaching repertoire, elevating the learning experience for students.
+                </p>
+              </div>
 
-      {/* WELL EQUIPPED CANTEEN */}
-      <div className="bg-gray-50 rounded-lg p-6 shadow-md">
-        <Utensils className="w-12 h-12 text-red-600 mb-4" />
-        <h3 className="text-2xl font-semibold mb-4">WELL EQUIPPED CANTEEN</h3>
-        <p className="text-gray-700">
-          Our canteen will ensure that students have access to safe, hygienic, and nutritious food. It is equipped with
-          modern infrastructure and offers purified drinking water for everyone. The entire campus is monitored through
-          CCTV surveillance and benefits from round-the-clock electricity, ensuring a secure and well-facilitated
-          environment.
-        </p>
-      </div>
+              {/* WELL EQUIPPED CANTEEN */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+                <Utensils className="w-12 h-12 text-red-600 mb-4" />
+                <h3 className="text-2xl font-semibold mb-4">WELL EQUIPPED CANTEEN</h3>
+                <p className="text-gray-700">
+                  Our canteen will ensure that students have access to safe, hygienic, and nutritious food. It is equipped with
+                  modern infrastructure and offers purified drinking water for everyone. The entire campus is monitored through
+                  CCTV surveillance and benefits from round-the-clock electricity, ensuring a secure and well-facilitated
+                  environment.
+                </p>
+              </div>
 
-      {/* SCHOOL ACCOMMODATION FACILITIES */}
-      <div className="bg-gray-50 rounded-lg p-6 shadow-md">
-        <Home className="w-12 h-12 text-yellow-600 mb-4" />
-        <h3 className="text-2xl font-semibold mb-4">SCHOOL ACCOMMODATION FACILITIES</h3>
-        <p className="text-gray-700">
-          Our hostels provide a "home away from home" experience with exceptional infrastructure and a vibrant community.
-          Students celebrate events like festivals, farewells, and get-togethers, fostering inclusivity. Equipped with
-          WiFi and sports facilities, the hostels support both recreation and academics. Separate accommodations for boys
-          and girls, along with single-seater room options, ensure comfort and privacy. A dedicated team manages the
-          hostels, maintaining a safe and supportive environment.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+              {/* SCHOOL ACCOMMODATION FACILITIES */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-md">
+                <Home className="w-12 h-12 text-yellow-600 mb-4" />
+                <h3 className="text-2xl font-semibold mb-4">SCHOOL ACCOMMODATION FACILITIES</h3>
+                <p className="text-gray-700">
+                  Our hostels provide a "home away from home" experience with exceptional infrastructure and a vibrant community.
+                  Students celebrate events like festivals, farewells, and get-togethers, fostering inclusivity. Equipped with
+                  WiFi and sports facilities, the hostels support both recreation and academics. Separate accommodations for boys
+                  and girls, along with single-seater room options, ensure comfort and privacy. A dedicated team manages the
+                  hostels, maintaining a safe and supportive environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         {/* Events Section */}
@@ -381,7 +391,7 @@ export default function AboutUs() {
               <p className="flex items-center justify-center gap-2">
                 <MapPin className="w-6 h-6 text-red-600" /> Address:{" "}
                 <span className="font-semibold">
-                Nimtoli, Ghansimuli, Kharupetia Darrang Assam 784115.
+                  Nimtoli, Ghansimuli, Kharupetia Darrang Assam 784115.
                 </span>
               </p>
             </div>

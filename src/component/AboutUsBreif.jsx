@@ -76,7 +76,6 @@ const AboutUsBrief = () => {
       label: "Modern Courses",
       color: "bg-green-500",
     },
-  
     {
       icon: Star,
       value: "100%",
@@ -91,14 +90,15 @@ const AboutUsBrief = () => {
       role: "Founder & Director",
       description: `It is with great pride that I extend a warm welcome to you all to this distinguished center of learning. Radiant Senior Secondary School, established in 2025 under the aegis of the Radiant Education Trust, is committed to delivering top-quality education to the students of North East India, enabling them to excel on a national platform.  We strive to provide students with exceptional opportunities for both academic excellence and professional development.`,
       color: "from-blue-400 to-purple-400",
+      featured: true,
     },
     {
       name: "Bandana Bharadwaj",
       role: "Principal",
       description: `At Radiant Senior Secondary School, we believe education is a journey of growth, discovery, and empowerment. As Principal, my vision is to nurture a learning environment that inspires curiosity, creativity, and excellence. Through a collaborative approach involving students, faculty, and parents, we aim to foster holistic development, critical thinking, and leadership skills. Together, we will build a legacy of innovation, resilience, and success, shaping bright futures and confident individuals.`,
       color: "from-purple-400 to-pink-400",
+      featured: false,
     },
-    
   ];
 
   return (
@@ -174,18 +174,74 @@ const AboutUsBrief = () => {
           ))}
         </motion.div>
 
-        {/* Leadership Section */}
+        {/* Leadership Section - Redesigned */}
         <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeInUpVariants}
-          className="max-w-5xl mx-auto"
+          className="max-w-6xl mx-auto"
         >
           <h3 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Our Leadership
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {leaders.map((leader, index) => (
+          
+          {/* Featured Leader - Founder & Director */}
+          {leaders.filter(leader => leader.featured).map((leader, index) => (
+            <motion.div
+              key={index}
+              className="relative group mb-16"
+              whileHover={{ scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <div
+                className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-2xl blur opacity-60 group-hover:opacity-80 transition-opacity`}
+              />
+              <div className="relative bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-700 overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-10 rounded-full -mr-32 -mt-32"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500 opacity-10 rounded-full -ml-32 -mb-32"></div>
+                
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                  <div className="relative shrink-0">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-full blur-md`}
+                    />
+                    <img
+                      src={`/${leader.name}.png`}
+                      alt={leader.name}
+                      className="w-36 h-36 md:w-48 md:h-48 rounded-full relative object-contain border-4 border-blue-400 shadow-lg"
+                    />
+                    <div className="absolute inset-0 rounded-full border-2 border-white opacity-30 animate-pulse"></div>
+                  </div>
+                  
+                  <div className="flex-1 text-center md:text-left">
+                    <div className="inline-block mb-3 px-4 py-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
+                      <span className="text-white font-semibold">{leader.role}</span>
+                    </div>
+                    <h4 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                      {leader.name}
+                    </h4>
+                    <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mb-6 mx-auto md:mx-0"></div>
+                    <p className="text-lg text-blue-100 leading-relaxed">{leader.description}</p>
+                    
+                    <motion.div 
+                      className="mt-6"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <a href="/vision-mission">
+                      <div className="inline-block px-6 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium cursor-pointer">
+                        Vision & Mission
+                      </div>
+                      </a>
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+          
+          {/* Other Leaders */}
+          <div className="grid grid-cols-1 gap-8">
+            {leaders.filter(leader => !leader.featured).map((leader, index) => (
               <motion.div
                 key={index}
                 className="relative group"
@@ -199,12 +255,12 @@ const AboutUsBrief = () => {
                   <div className="flex items-center space-x-4">
                     <div className="relative">
                       <div
-                        className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-full blur-md`}
+                        className={`absolute inset-0 bg-gradient-to-r ${leader.color} rounded-full blur-sm`}
                       />
                       <img
                         src={`/${leader.name}.png`}
                         alt={leader.name}
-                        className="w-24 h-24 rounded-full relative object-cover"
+                        className="w-24 h-24 rounded-full relative object-cover p-1"
                       />
                     </div>
                     <div>
@@ -226,3 +282,4 @@ const AboutUsBrief = () => {
 };
 
 export default AboutUsBrief;
+
