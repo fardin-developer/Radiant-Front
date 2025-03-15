@@ -152,7 +152,9 @@ export default function Navbar() {
                 >
                   <div className="flex items-center">
                     <span className="mr-3">{item.icon}</span>
+                    <a href={item.href || "#"}>
                     <span>{item.name}</span>
+                    </a>
                   </div>
                   {item.submenu && (
                     <span className={`transition-transform duration-200 ${openMenu === index ? 'rotate-180' : ''}`}>

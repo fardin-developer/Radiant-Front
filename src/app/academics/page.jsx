@@ -1,6 +1,7 @@
 import FacultySection from "@/component/Faculty";
 import Footer from "@/component/global/Footer";
 import Navbar from "@/component/global/Navbar";
+import HeroSection from "@/component/global/HeroSection";
 
 export default function AcademicsPage() {
   return (
@@ -8,18 +9,8 @@ export default function AcademicsPage() {
       <Navbar />
 
       <main className="flex-1 bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-blue-900 text-white py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Academics at Radiant School
-            </h1>
-            <p className="text-xl md:text-2xl font-light">
-              Nurturing Excellence Through Innovative Learning and Holistic
-              Development
-            </p>
-          </div>
-        </section>
+        <HeroSection title="Academics at Radiant School" subtitle="Nurturing Excellence Through Innovative Learning and Holistic
+              Development"/>
 
 {/* Academic Programs Section */}
 <section id="courses" className="py-16 px-4">

@@ -1,6 +1,8 @@
 "use client";
 import Footer from "@/component/global/Footer";
 import Navbar from "@/component/global/Navbar";
+import HeroSection from "@/component/global/HeroSection";
+
 import {
   BookOpen,
   Users,
@@ -20,6 +22,7 @@ import {
   Home
 } from "lucide-react";
 import { useEffect } from "react";
+
 
 export default function AboutUs() {
   // Handle smooth scrolling when the page loads with a hash
@@ -55,23 +58,11 @@ export default function AboutUs() {
     <>
       <Navbar />
       <div className="bg-gray-50">
-        {/* Banner Section */}
-        {/* <div
-          className="relative h-[500px] flex items-center justify-center bg-cover bg-center"
-          
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-          <h1 className="text-6xl font-extrabold text-white z-10">About Us</h1>
-        </div> */}
-        {/* Hero Section */}
-        <section className="bg-blue-900 text-white py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
-            <p className="text-xl md:text-2xl font-light">
-            Empowering Students for a Brighter Tomorrow
-            </p>
-          </div>
-        </section>
+        <HeroSection
+          title="About Us"
+          subtitle="Empowering Students for a Brighter Tomorrow"
+        />
+
         I
 
         {/* About Our School Section */}

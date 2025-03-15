@@ -1,21 +1,13 @@
 import Footer from "@/component/global/Footer";
 import Navbar from "@/component/global/Navbar";
-
+import HeroSection from "@/component/global/HeroSection";
 export default function AdmissionPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
       <main className="flex-1 bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-blue-900 text-white py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Admissions</h1>
-            <p className="text-xl md:text-2xl font-light">
-              Join Radiant School – Your Path to Excellence Begins Here
-            </p>
-          </div>
-        </section>
+        <HeroSection title="Admissions" subtitle="Join Radiant School – Your Path to Excellence Begins Here"/>
 
         {/* Admission Process */}
         <section id="process" className="py-16 px-4">

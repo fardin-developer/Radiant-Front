@@ -3,6 +3,7 @@ import Footer from '@/component/global/Footer';
 import Navbar from '@/component/global/Navbar';
 import React, { useState, useEffect } from 'react';
 import emailjs from "emailjs-com";
+import HeroSection from '@/component/global/HeroSection';
 
 const ContactUsPage = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -89,20 +90,8 @@ const ContactUsPage = () => {
     return (
         <>
             <Navbar />
-            {/* Banner Section */}
-            {/* <div className="relative h-96 flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('contact-us.png')" }}>
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-                <h1 className="text-5xl font-bold text-white z-10">Contact Us</h1>
-            </div> */}
-               {/* Hero Section */}
-        <section className="bg-blue-900 text-white py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl md:text-2xl font-light">
-              Ask your Queries
-            </p>
-          </div>
-        </section>
+        <HeroSection title="Contact Us" subtitle="Ask your Queries"/>
+
 
             {/* Contact Section */}
             <div className="py-16 bg-gray-50">

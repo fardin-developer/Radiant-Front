@@ -1,5 +1,6 @@
 import CampusGallery from "@/component/CampusGallery";
 import Footer from "@/component/global/Footer";
+import HeroSection from "@/component/global/HeroSection";
 import Navbar from "@/component/global/Navbar";
 import { Camera, BookOpen, Globe, Music, Trophy } from 'lucide-react';
 
@@ -12,15 +13,8 @@ export default function StudentLifePage() {
       <Navbar />
 
       <main className="flex-1 bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-blue-900 text-white py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Student Life</h1>
-            <p className="text-xl md:text-2xl font-light">
-              Discover, Learn, Grow - Your Journey of Exploration Begins Here
-            </p>
-          </div>
-        </section>
+
+        <HeroSection title="Student Life" subtitle="Discover, Learn, Grow - Your Journey of Exploration Begins Here"/>
 
         {/* Activities Section */}
         <section id="activities" className="py-16 px-4 bg-white">
