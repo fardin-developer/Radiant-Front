@@ -37,36 +37,15 @@ const FuturisticBanner = () => {
   }, []);
 
   useEffect(() => {
-    // Delay video loading to allow page to render first
-    // This ensures the site loads quickly even on slow connections
+    // Set a small timeout to ensure video loads after initial render
     const loadTimer = setTimeout(() => {
       setShouldLoadVideo(true);
-    }, 100); // Small delay to let page render first
-
-    // Use Intersection Observer to start loading when component is visible
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !shouldLoadVideo) {
-            setShouldLoadVideo(true);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentVideoRef = videoRef.current;
-    if (currentVideoRef) {
-      observer.observe(currentVideoRef);
-    }
+    }, 500);
 
     return () => {
       clearTimeout(loadTimer);
-      if (currentVideoRef) {
-        observer.unobserve(currentVideoRef);
-      }
     };
-  }, [shouldLoadVideo]);
+  }, []);
 
   const handleVideoLoaded = () => {
     setVideoLoaded(true);
@@ -89,9 +68,13 @@ const FuturisticBanner = () => {
             loop
             muted
             playsInline
-            preload="none"
+            preload="metadata"
             onLoadedData={handleVideoLoaded}
-            onCanPlay={handleVideoLoaded}
+            onCanPlay={(e) => {
+              handleVideoLoaded();
+              // Ensure video plays
+              e.target.play().catch(err => console.error('Playback error:', err));
+            }}
             onError={(e) => {
               console.error('Video loading error:', e);
               // Fallback to gradient if video fails to load
@@ -101,7 +84,7 @@ const FuturisticBanner = () => {
               videoLoaded ? "opacity-100" : "opacity-0"
             }`}
           >
-            <source src="/4.mp4" type="video/mp4" />
+            <source src="/5.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         )}
