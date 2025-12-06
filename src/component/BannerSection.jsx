@@ -101,7 +101,7 @@ const FuturisticBanner = () => {
               videoLoaded ? "opacity-100" : "opacity-0"
             }`}
           >
-            <source src="/2.mp4" type="video/mp4" />
+            <source src="/4.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         )}
